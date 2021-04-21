@@ -1,0 +1,18 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Document extends Model
+{
+    public $timestamps = false;
+    public function Dealers()
+    {
+        return $this->belongsTo('App\Dealer');
+    }
+    public function users()
+    {
+        return $this->belongsTo('App\User');
+    }
+}

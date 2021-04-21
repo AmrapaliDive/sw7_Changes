@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title> </title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="font.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  
+  <!-- jsGrid -->
+  <link rel="stylesheet" href="plugins/jsgrid/jsgrid.min.css">
+  <link rel="stylesheet" href="plugins/jsgrid/jsgrid-theme.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+                $("#show_hide_password a").on('click', function(event) {
+                    event.preventDefault();
+                    if($('#show_hide_password input').attr("type") == "text"){
+                        $('#show_hide_password input').attr('type', 'password');
+                        $('#show_hide_password i').addClass( "fa-eye-slash" );
+                        $('#show_hide_password i').removeClass( "fa-eye" );
+                    }else if($('#show_hide_password input').attr("type") == "password"){
+                        $('#show_hide_password input').attr('type', 'text');
+                        $('#show_hide_password i').removeClass( "fa-eye-slash" );
+                        $('#show_hide_password i').addClass( "fa-eye" );
+                    }
+                });
+            });
+        </script>
+        
+        <script>
+            $(function(){
+               $('.btn-Next').click(function(){
+                    $('.nav-pills > .nav-item > .active').parent().next('li').find('a').trigger('click');
+               });
+
+             $('.btn-Previous').click(function(){
+                  $('.nav-pills > .nav-item > .active').parent().prev('li').find('a').trigger('click');
+               }); 
+            });
+             
+        </script>
+  
+  <!-- multiselect picker -->
+        <script>
+            $(function(){
+               $('select').selectpicker(); 
+            });
+        </script>
+
+<!-- browse file -->
+    <script>
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+        
+    <style>
+            
+      /*  toggle button*/
+                  
+                  .switch {
+                    margin-left: 10px;
+                    position: relative;
+                    display: inline-block;
+                    width: 60px;
+                    height: 32px;
+                  }
+      
+                  .switch input { 
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                  }
+      
+                  .slider {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #ccc;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                  }
+      
+                  .slider:before {
+                    position: absolute;
+                    content: "";
+                    height: 24px;
+                    width: 24px;
+                    left: 4px;
+                    bottom: 4px;
+                    background-color: white;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                  }
+      
+                  input:checked + .slider {
+                    background-color: #2196F3;
+                  }
+      
+                  input:focus + .slider {
+                    box-shadow: 0 0 1px #2196F3;
+                  }
+      
+                  input:checked + .slider:before {
+                    -webkit-transform: translateX(24px);
+                    -ms-transform: translateX(24px);
+                    transform: translateX(24px);
+                  }
+      
+      /* Rounded sliders */
+                  .slider.round {
+                    border-radius: 34px;
+                  }
+      
+                  .slider.round:before {
+                    border-radius: 50%;
+                  }
+      
+                  #example_paginate{
+                      float:right;
+                  }
+      
+                  #example_length{
+                      display:none;
+                  }
+      
+      
+              </style>
+
+</head>
+
+
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed"  >
+    <div class="wrapper">
+ <!-- Navbar -->
+ <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    
+      
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+        <i class="fa fa-power-off" style="color:red"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-light-navy elevation-4"  >
+  <!-- Brand Logo -->
+  <a href="index3.html" class="brand-link ">
+    <img src="logo.jpg" alt="Admin Logo" class="brand-image  elevation-3">
+    <!--<span class="brand-text font-weight-light">Admin</span>-->
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar" >
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image"  style="opacity: .8" >
+      </div>
+      <div class="info">
+        <a href="#" class="d-block">Alexander Pierce</a>
+      </div>
+    </div>
+
+    <!-- SidebarSearch Form -->
+    <div class="form-inline"  >
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+   
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2 nav-bg-dark" >
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        <li class="nav-item has-treeview menu-open">
+          <a href="index.html" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Dashboard
+            </p>
+          </a>
+          
+        </li>
+
+    
+        
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+          <i class="fa fa-user-times mr-1" aria-hidden="true"></i>
+            <p>
+                 Users
+              <i class="fas fa-angle-left right"></i>
+              <!--<span class="badge badge-info right">6</span>-->
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="StoreManager.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Store Manager</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="UserAgentSession.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Agent Session Log</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-treeview">
+          <a href="TargetSetting.html" class="nav-link">
+          <i class="fa fa-bullseye" aria-hidden="true"></i>
+            <p>
+            Target Settings
+              
+            </p>
+          </a>            
+        </li>
+        <li class="nav-item ">
+              <a href="Masters.html" class="nav-link">
+                <i class="fa fa-database mr-1" aria-hidden="true"></i>
+                <i class="fas fa-angle-left right"></i>
+                  <p>
+                  Masters</p></a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="Category.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Category</p>
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="SubCategory.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Sub Category</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="ProductLine.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Product Line</p>
+              </a>
+            </li>
+          </ul>
+          
+        
+        </li>
+        <li class="nav-item ">
+          <a href="#" class="nav-link">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <i class="fas fa-angle-left right"></i>
+            <p>
+            Products
+              
+            </p>
+          </a>
+
+          <ul class="nav nav-treeview">
+          <li class="nav-item">
+              <a href="Products.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Products</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="UpdateMRP.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>UpdateMRP</p>
+              </a>
+            </li>
+            </ul>
+        </li>
+      
+        
+        <li class="nav-item ">
+          <a href="CatalogueUpload.html" class="nav-link">
+          <i class="fa fa-upload" aria-hidden="true"></i>
+            <p>
+            Catalogue Upload
+              
+            </p>
+          </a>
+         
+        </li>
+
+        <li class="nav-item ">
+          <a href="Inventory.html" class="nav-link">
+          <i class="fa fa-desktop" aria-hidden="true"></i>
+            <p>
+            Inventory
+              
+            </p>
+          </a>
+         
+        </li>
+        <li class="nav-item ">
+          <a href="FeaturedCategories.html" class="nav-link">
+          <i class="fa fa-th-large" aria-hidden="true"></i>
+            <p>
+            Featured Categories
+              
+            </p>
+          </a>
+         
+        </li>
+
+        <li class="nav-item ">
+          <a href="Customer.html" class="nav-link">
+          <i class="fa fa-users" aria-hidden="true"></i>
+            <p>
+            Customers
+              
+            </p>
+          </a>
+         
+        </li>
+
+        <li class="nav-item ">
+          <a href="#" class="nav-link">
+          <i class='fas fa-balance-scale'></i>
+          <i class="fas fa-angle-left right"></i>
+            <p>
+            Sales
+              
+            </p>
+          </a>
+
+          <ul class="nav nav-treeview">
+          <li class="nav-item">
+              <a href="Sales.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Sales</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="NetSales.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Net Sales</p>
+              </a>
+            </li>
+            </ul>
+         
+        </li>
+
+        <li class="nav-item ">
+          <a href="HomeBanner.html" class="nav-link">
+          <i class='fab fa-accusoft'></i></i>
+            <p>
+            Home Banner
+            </p>
+          </a>
+         
+        </li>
+
+        <li class="nav-item ">
+          <a href="Feedback.html" class="nav-link">
+          <i class="fa fa-thumbs-up " aria-hidden="true"></i>
+            <p>
+            Feedback
+            </p>
+          </a>
+         
+        </li>
+
+        <li class="nav-item ">
+          <a href="#" class="nav-link">
+          <i class="fa fa-bug" aria-hidden="true"></i>
+          <p>
+            Reports
+            </p>
+          </a>
+         
+        </li>
+        <br>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
+   <!-- Contains all page content -->
+
+     <!-- Content Wrapper. Contains page content -->
+<section>
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Store Manager</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- /.content-header button group -->
+
+    <section class="content">
+        <div class="container mb-2">
+
+          <div class="row " >
+              <div class="btn-group ml-3 mr-3" role="group" aria-label="Zero group">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-lg form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                    </div>
+               </div>                
+              
+            
+      
+              <div class="btn-group ml-3" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-outline-info px-3">Add/Update Agent Ids</button>
+      
+              </div>
+              <div class="btn-group ml-3 " role="group" aria-label="Second group">
+                  <button type="button" class="btn btn-outline-info px-3">Create New Stores</button>
+              </div>
+              <div class="btn-group ml-3 " role="group" aria-label="Third group">
+                  <button type="button" class="btn btn-outline-info px-3" data-toggle="modal" data-target="#myMol">Create New Store</button>
+              </div>
+
+              <div class="btn-group ml-3 mr-1" role="group" aria-label="forth group">
+                  <button type="button" class="btn btn-outline-info px-4">
+                      
+                  <i class="fa fa-file-excel-o" aria-hidden="true"></i>
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-spreadsheet-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M2 3a2 2 0 0 1 2-2h5.293a1 1 0 0 1 .707.293L13.707 5a1 1 0 0 1 .293.707V13a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3zm7 2V2l4 4h-3a1 1 0 0 1-1-1zM3 8v1h2v2H3v1h2v2h1v-2h3v2h1v-2h3v-1h-3V9h3V8H3zm3 3V9h3v2H6z"/>
+                  </svg>
+                  Excel
+                  </button>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade" id="myMol" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content ">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Edit Store</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                  </div>
+                  <div class="modal-body ">
+                      <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                              <li class="nav-item active" style=" background-color: #66666687; margin-right: 5px; border-radius:4px">
+                                <a class="nav-link active" id="pills-home-tab1" data-toggle="pill" href="#pills-home1" role="tab" aria-controls="pills-home" aria-selected="true" style="color:#fff">General</a>
+                              </li>
+                              <li class="nav-item" style=" background-color: #66666687; margin-right: 5px;border-radius:4px">
+                                <a class="nav-link" id="pills-profile-tab2" data-toggle="pill" href="#pills-profile2" role="tab" aria-controls="pills-profile" aria-selected="false" style="color:#fff">Contact</a>
+                              </li>
+                              <li class="nav-item" style=" background-color: #66666687; margin-right: 5px; border-radius:4px">
+                                <a class="nav-link" id="pills-contact-tab3" data-toggle="pill" href="#pills-contact3" role="tab" aria-controls="pills-contact" aria-selected="false" style="color:#fff">Account</a>
+                              </li>
+                            </ul>
+                            <div class="tab-content " id="pills-tabContent">
+                              <div class="tab-pane fade show active" id="pills-home1" role="tabpanel" aria-labelledby="pills-home-tab1"> 
+                                  <form>
+                                      <div class="form-group">
+                                        <label for="">Store Manager Name</label>
+                                        <input type="text" class="form-control form-control-sm " id="" name="Store_Name">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="">Store ID</label>
+                                        <input type="text" class="form-control form-control-sm" id="" name="Store_id">
+                                      </div>
+                                        <div class="form-group">
+                                        <label for="">Description</label>
+                                        <textarea class="form-control" id="" rows="2" name="Description"></textarea>
+                                      </div>
+
+                                      <div class="form-group">
+                                        <label for="" style="text-align: center">Status</label>
+                                        <label class="switch">
+                                          <input type="checkbox" checked name="status">
+                                          <span class="slider round"></span>
+                                        </label>
+                                      </div>    
+
+                                    </form>
+                                    <hr>
+                                    <a class="btn btn-primary btn-sm btn-Next" style="float: right">Next</a>
+                                    <a class="btn btn-secondary btn-sm" data-dismiss="modal" style="float: right; margin-right: 5px;">Close</a>
+                              </div>
+                              <div class="tab-pane fade" id="pills-profile2" role="tabpanel" aria-labelledby="pills-profile-tab2"> <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="">Contact Person</label>
+                                          <input type="text" class="form-control form-control-sm" id="" name="contact_person">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputPassword4">Phone</label>
+                                          <input type="tel" class="form-control form-control-sm" id="inputPassword4" name="phone">
+                                        </div>
+                                      </div>
+                                  
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputEmail4">Email</label>
+                                          <input type="email" class="form-control form-control-sm" id="inputEmail4" name="email">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputPassword4">Pin Code</label>
+                                          <input type="text" class="form-control form-control-sm" id="inputPassword4" name="pin_code">
+                                        </div>
+                                      </div>
+                                  
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputEmail4">Address</label>
+                                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="address"></textarea>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputPassword4">Country</label>
+                                          <input type="text" class="form-control form-control-sm" id="inputPassword4" name="country">
+                                        </div>
+                                    </div> 
+                                  
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputEmail4">State</label>
+                                          <input type="text" class="form-control form-control-sm" id="inputEmail4" name="state">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputPassword4">City</label>
+                                          <input type="text" class="form-control form-control-sm" id="inputPassword4" name="city">
+                                        </div>
+                                      </div>
+
+                                    </form>
+                                    <hr>
+                                    <a class="btn btn-primary btn-sm btn-Next" style="float: right">Next</a>
+                                    <a class="btn btn-secondary btn-sm btn-Previous" style="float: right; margin-right:5px">Previous</a>
+                                </div>
+                              <div class="tab-pane fade" id="pills-contact3" role="tabpanel" aria-labelledby="pills-contact-tab3">    
+                              <div class="row">
+                                  <div class="col-sm-9">
+                                  <form>
+                                  <div class="form-group">
+                                    <label for="formGroupExampleInput">Store Manager Id</label>
+                                    <input type="number" class="form-control form-control-sm " id="formGroupExampleInput" name="store_manager_id">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="formGroupExampleInput2">Store Manager Name</label>
+                                    <input type="text" class="form-control form-control-sm" id="formGroupExampleInput2" name="store_manager_name">
+                                  </div>
+                                      
+                                  <div class="form-group">
+                                    <label>Password</label>
+                                    <div class="input-group" id="show_hide_password">
+                                    <div class="input-group" id="show_hide_password">
+                                      <input class="form-control form-control-sm" type="password" name="password">
+                                      <div class="input-group-prepend" style="border: 1px solid #ced4da; border-left: none; padding: 0px 5px;">
+                                        <a href="#"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                                      </div>
+                                    </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Confirm Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="formGroupExampleInput2" name="cpassword">
+                                  </div>    
+
+                                </form>
+                                </div>
+                                  <div class="col-sm-3">
+                                    <a href="" class="btn btn-sm btn-danger ml-3" style="margin: 191px 0px 0px 0px;" ><b>RESET</b></a>
+                                    <a href="" class="btn btn-sm btn-primary" style="margin: 191px 0px 0px 0px; float: right"><b>Submit</b></a>
+                                      
+                                  </div>
+                            </div>
+                                  <hr>
+                                  <a  class="btn btn-primary btn-sm" style="float: right">Finish</a>
+                                  <a  class="btn btn-secondary btn-sm btn-Previous" style="float: right; margin-right: 5px;">Previous</a>
+                                
+                                  
+                                </div>
+                            </div>
+                        
+                  </div>
+                  
+                </div>
+              </div>
+        </div>  
+
+        <div class="container mb-5">
+
+            <div class="row">
+            <div class="col-12 col-sm-6 col-md-12 mb-3">
+          <div class="card ">
+            
+          <div class="card-body table-responsive">       
+              <table id="example" class="table table-striped table-bordered mydatatable bg-light" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Store ID</th>
+                    <th>Store Manager ID</th>
+                    <th>Store Manager Name </th>
+                    <th>Status</th>
+                    <th>Last Status Modified</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    
+                    <td>
+                      <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                      </label>
+                  </td>
+                  <td>63</td>
+                    <td><a href="StoreManagerDetails.html"class="mr-2"><i class="fa fa-eye" aria-hidden="true"></i></a><a href=""><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                </tr>
+                
+              
+              
+
+            </tbody>
+            <tfoot>
+            <tr>
+                    <th>ID</th>
+                    <th>Store ID</th>
+                    <th>Store Manager ID</th>
+                    <th>Store Manager Name </th>
+                    <th>Status</th>
+                    <th>Last Status Modified</th>
+                    <th>Actions</th>
+                </tr>
+            </tbody>
+
+              </table>
+         </div>
+      </div>
+      </div>
+      </div>
+    </div>
+      </div>
+
+  </section>
+
+</div>
+
+
+   
+
+<!-- REQUIRED SCRIPTS -->
+<script>
+
+  $('.mydatatable').dataTable( {
+      searching: false,
+      ordering: false,
+    "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ] ,
+    createdRow: function( row, data,index ){
+        if( data[5].replace(/[\$,]/g, '') * 1 > 150000 )
+        {
+          
+  
+        }
+      }
+  } );
+  
+  
+  </script>
+  
+  
+  <script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
+  
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+  
+  <!-- OPTIONAL SCRIPTS -->
+  <script src="dist/js/demo.js"></script>
+  
+  <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.13/r-2.1.1/datatables.min.js"></script>
+  
+  <!-- PAGE PLUGINS -->
+  <!-- jQuery Mapael -->
+  <script src="plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+  <script src="plugins/raphael/raphael.min.js"></script>
+  <script src="plugins/jquery-mapael/jquery.mapael.min.js"></script>
+  <script src="plugins/jquery-mapael/maps/usa_states.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  
+  <!-- PAGE SCRIPTS -->
+  <script src="dist/js/pages/dashboard2.js"></script>
+  
+  
+  
+  
+  </body>
+  </html>
