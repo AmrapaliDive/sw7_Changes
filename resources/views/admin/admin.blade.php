@@ -47,6 +47,12 @@
           <!-- <div class="col-md-6 col-md-offset-4"style="margin-top:50px">
 						<a style="font-size:20px;" type="button" class="btn btn-primary btn-lg btn-block"  href="{{ url('/admin/slider') }}">Sliders</a>
 					</div> -->
+		<div class="col-md-6 col-md-offset-4"style="margin-top:50px">
+			<a style="font-size:20px;" type="button" class="btn-lg btn-block"  href="{{ url('/studentlist') }}">Students</a>
+		</div>
+		<div class="col-md-6 col-md-offset-4"style="margin-top:50px">
+			<a style="font-size:20px;" type="button" class="btn-lg btn-block"  href="{{ url('/hostellist') }}">Hostel Admission Record</a>
+		</div>
           <div class="col-md-6 col-md-offset-4"style="margin-top:50px">
 						<a style="font-size:20px;" type="button" class="btn-lg btn-block"  href="{{ url('/admin/orderlist') }}">Payments</a>
 					</div>

@@ -817,6 +817,11 @@ a i{
                    <span class="text-dark"><b>Student List</b> </span></a>
                 </li>
                 <li>
+                  <a href="{{ url('/hostellist') }}">
+                 <i class="fa fa-home" aria-hidden="true"></i>
+                   <span class="text-dark"><b>Hostel List</b> </span></a>
+                </li>
+                <li>
                   <a href="{{ url('/admin/userblogs') }}" >
                   <i class="fa fa-book"></i>
                   <span class="text-dark"><b> Blog List </b></span>

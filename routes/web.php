@@ -168,6 +168,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/user_account', 'Customer\CustomerController@user_account');
 
     Route::get('/student_account', 'Student\StudentController@student_account');
+    
+    //hostel
+    Route::get('/hostel', 'student\hostelController@index');
+
+    Route::post('/storeForHostel', [
+        'uses' => 'Student\hostelController@storeForHostel',
+        'as' => 'storeForHostel'
+    ]);
 
     Route::get('/getcourseAdmission/{id}', [
         'uses' => 'Student\StudentController@getcourseAdmission',
@@ -347,6 +355,13 @@ Route::get('/delete_Admission/{id}', 'Admin\StudentController@delete_Admission')
 Route::post('/admission/recordsByFranchisee', 'Admin\StudentController@getAdmissionsRecordsByFranchisee');
 Route::get('/student_documents/{id}', 'Admin\StudentController@student_documents');
 Route::get('/studentlist/delete/{id}', 'Admin\StudentController@delete_student');
+
+//hostellist
+Route::get('/hostellist', 'Admin\HostelListController@index');
+//Route::get('/hostellist/delete/{id}', 'Admin\HostelListController@delete_hostel_record');
+Route::get('/admin/delete_hostel/{id}', 'Admin\HostelListController@delete_hostel');
+
+
 //delaer routes
 // Route::get('/dealer', 'Dealer\DealerController@index');
 // Route::post('/dealer/insert/', 'Dealer\DealerController@insert');

@@ -1770,7 +1770,28 @@ border:1px solid #ddd;
             
                   
             <!-- /.item -->
-            
+            <div class="item">
+            <a href="<?php echo e(url('/hostel')); ?>">
+                  <img src="images/new/sw5.jpeg" style="background-size:contain;background-position:center;background-repeat:no-repeat;"></a>
+             
+              <div class="container-fluid">
+                <div class="caption bg-color vertical-center text-left sagar" >
+                  <div class="slider-header fadeInDown-1"></div>
+                  <div class="big-text fadeInDown-1"> <span class=" animate_animated animate_bounce " style="color:black;"><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </div>
+                  <div class="info-boxes wow fadeInUp" >
+          
+        </div>
+        <!-- /.info-boxes --> 
+                  <div class="excerpt fadeInDown-2 hidden-xs"> <span></span> </div>
+                 
+                  <!--<div class="button-holder fadeInDown-3 text-center"><a href="#" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Read more</a> </div> -->
+                </div>
+                
+                <!-- /.caption --> 
+              </div>
+              <!-- /.container-fluid --> 
+            </div>
+            <!-- /.item -->
           </div>
 
           

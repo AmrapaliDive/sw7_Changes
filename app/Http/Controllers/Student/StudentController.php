@@ -146,7 +146,7 @@ class StudentController extends Controller{
 							$message->from('sales@sw7infomedia.com', 'Sw7');
 							});
 							$student->save();
-							return redirect('/')->with('success', 'Student Details Successfully Inserted, User Logged In.');
+							return redirect('/')->with('success', '<script>alert("Student Details Successfully Inserted, User Logged In.")</script>');
 						}
 
 					}

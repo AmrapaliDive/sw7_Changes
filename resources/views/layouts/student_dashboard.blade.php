@@ -864,6 +864,16 @@ body {
             </a>
           </li>
           <li>
+          <li>
+          
+            <a href="{{url('/hostel')}}">
+            <!-- <a href="#"> -->
+              <i class="fa fa-book"></i>
+              <span class="text-dark"><b>Add Hostel Details</b></span>
+              {{-- <span class="badge badge-pill badge-primary">Beta</span> --}}
+            </a>
+          </li>
+          <li>
           <!-- <li>
           
             <a href="{{url('/user/wishlist')}}">

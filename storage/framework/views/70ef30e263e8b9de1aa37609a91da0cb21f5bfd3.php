@@ -16,6 +16,44 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
    
+  
+<!-- Bootstrap Core CSS -->
+
+<link rel="stylesheet" href="<?php echo e(asset('assets/css/bootstrap.min.css')); ?>">
+
+<!-- Customizable CSS -->
+<link rel="stylesheet" href="<?php echo e(asset('assets/css/main.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/css/blue.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/css/owl.carousel.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/css/owl.transitions.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/css/animate.min.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/css/rateit.css')); ?>">
+<link rel="stylesheet" href="<?php echo e(asset('assets/css/bootstrap-select.min.css')); ?>">
+
+<!-- Icons/Glyphs -->
+<link rel="stylesheet" href="<?php echo e(asset('assets/css/font-awesome.css')); ?>">
+
+<!-- Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+<!-- JavaScripts placed at the end of the document so the pages load faster --> 
+<script src="<?php echo e(asset('assets/js/jquery-1.11.1.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assets/js/bootstrap.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assets/js/bootstrap-hover-dropdown.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assets/js/owl.carousel.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assets/js/echo.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assets/js/jquery.easing-1.3.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assets/js/bootstrap-slider.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assets/js/jquery.rateit.min.js')); ?>"></script> 
+<script type="<?php echo e(asset('text/javascript" src="assets/js/lightbox.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assets/js/bootstrap-select.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assets/js/wow.min.js')); ?>"></script> 
+<script src="<?php echo e(asset('assets/js/scripts.js')); ?>"></script>
+
+   
   <style>
 #scrollUp {
     bottom: 5px;
@@ -123,8 +161,7 @@
   }
 }
 body {
-  font-size: 1.5rem;
-  
+  font-size: 1.6rem;
 }
 .page-wrapper .sidebar-wrapper,
 .sidebar-wrapper .sidebar-brand > a,
@@ -145,7 +182,6 @@ body {
 }
 
 /*----------------page-wrapper----------------*/
-
 
 .page-wrapper {
   height: 100vh;
@@ -184,9 +220,6 @@ body {
   height: 40px;
   margin-left: 10px;
   transition-delay: 0.3s;
-  background: #ffc20e;
-    color: #b60a0a;
-    font-size: 16px;
 }
 .page-wrapper.toggled #show-sidebar {
   left: -80px;
@@ -221,7 +254,6 @@ body {
   height: calc(100% - 30px);
   overflow-y: auto;
   position: relative;
-  background-color:#ffc20e;
 }
 
 .sidebar-content.desktop {
@@ -254,7 +286,6 @@ body {
 .sidebar-wrapper .sidebar-header {
   padding: 20px;
   overflow: hidden;
-  background :#b60a0a;
 }
 
 .sidebar-wrapper .sidebar-header .user-pic {
@@ -559,7 +590,7 @@ body {
 .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown div,
 .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
 .chiller-theme .sidebar-wrapper .sidebar-search .input-group-text {
-    background: #ffc20e;
+    background: #3a3f48;
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {
@@ -580,9 +611,7 @@ body {
 .chiller-theme .sidebar-footer>a:last-child {
     border-right: none;
 }
-a i{
-  color:#b60a0a;
-}
+
 </style>
     <?php echo $__env->yieldContent('styles'); ?>
   </head>
@@ -592,30 +621,43 @@ a i{
 </style>
 <?php echo $__env->yieldContent('styles'); ?>
 </head>
-<body style="background-color: #fff;" >
+<body style="background-color: #fff;">
     <?php echo $__env->yieldContent('content'); ?>
 
 <div class="page-wrapper chiller-theme toggled">
-  <a id="show-sidebar" class="btn btn-sm btn-dark"  href="#">
+  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
     <i class="fas fa-bars" style="margin-top: 10px"></i>
   </a>
-  <nav id="sidebar" class="sidebar-wrapper navbar-light bg-light">
+  <nav id="sidebar" class="sidebar-wrapper  navbar-light bg-light">
     <div class="sidebar-content">
-      <div class="sidebar-brand">
-        <a href="<?php echo e(url('/ ')); ?>" class="text-dark">SW7</a>
+     <center> <div class="sidebar-brand">
+        <a href="<?php echo e(url('/ ')); ?>" class=" text-dark">SW7</a>
         <div id="close-sidebar">
-          <i class="fas fa-times" style="color: #b60a0a;"></i>
+          <i class="fas fa-times"></i>
         </div>
-      </div>
-      <center><span style="color:white; text-align:center;font-size:22px" class="text-dark"></span></center>
+		<hr>
+      </div></center><center><span class=""><strong><i class="fa fa-envelope" aria-hidden="true"></i></strong> <a href="#">support@sw7infomedia.com</a></span></center>
+	                      <center>  <span class="mr-2"><strong><i class="fa fa-phone" aria-hidden="true"></i></strong><a href="#"> 7030023002</a></span></center>
+	
+    
 
       
       <div class="sidebar-header">
         
-        <div class="user-info">
+    <center><div class="user-info ml-5">
           
+
+          <?php
+          use App\Student;
+          $student = Student::where('email',Auth::user()->email)->first();
+          ?>
           <?php if(Auth::check()): ?>
-          <span style="font-size:18px;color:white !important;" class="text-dark"><b>Hi</b> <?php echo e(Auth::user()->email); ?>&nbsp;</span>   <a href="#" data-toggle="tooltip" data-placement="bottom" style="font-size: 20px" title=""></a>
+          <?php if($student->passport_image!=''): ?>
+          <img id="zoom" style="height:100px;width:100px;" class="img-responsive img-circle elevation-2 ml-5"  src="<?php echo URL::to($student->passport_image); ?>  " />
+          <?php endif; ?>
+          <br>
+		  
+           <span style="font-size: 15px" class="text-dark ml-3"><b><i class="fa fa-graduation-cap" aria-hidden="true" ></i> <?php echo e($student->first_name); ?> <?php echo e($student->last_name); ?></b></span>   <a href="#" data-toggle="tooltip" data-placement="bottom" style="font-size: 20px" title=""></a>
            
           <?php if(Auth::user()->role=="dealer"): ?>
             
@@ -625,18 +667,16 @@ a i{
               </ul>
             </li>
           <?php elseif(Auth::user()->role=="customer"): ?>
-          <li class="dropdown">
+          <!-- <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="font-size:20px;margin-top:20px;">
             <b>customer</b>
                 <span class=" "></span>
             </a>
             <ul class="dropdown-menu" role="menu">
             <li><a onMouseOver="this.style.background='#2ab27b'"onMouseOut="this.style.background='#fff'" href="<?php echo e(url('/customer/edit')); ?>" >update profile</a></li>
-            <!-- <li><a onMouseOver="this.style.background='#2ab27b'"onMouseOut="this.style.background='#fff'" href="<?php echo e(url('/fruits/organicfruits')); ?>" >Organic</a></li>
-            <li><a onMouseOver="this.style.background='#2ab27b'"onMouseOut="this.style.background='#fff'" href="<?php echo e(url('/fruits/getSeasonalfruits')); ?>"> Seasonal Fruits</a></li>
-            <li><a onMouseOver="this.style.background='#2ab27b'"onMouseOut="this.style.background='#fff'" href="<?php echo e(url('/fruits/other')); ?>">Other</a></li> -->
+           
               </ul>
-            </li>
+            </li> -->
             <?php endif; ?>
           <?php else: ?> 
            <span style="font-size: 18">Hi!&nbsp;</span>   <a href="<?php echo e(url('/user/login')); ?>" data-toggle="tooltip" data-placement="bottom" style="font-size: 20px" title="">Sign in</a>
@@ -649,7 +689,7 @@ a i{
 
           
           
-        </div>
+        </div></center>
       </div>
       <!-- sidebar-header  --
 
@@ -669,10 +709,10 @@ a i{
       <div class="sidebar-menu" >
         <ul>
           <li class="header-menu">
-            <span style="color:#343a40">General</span>
+            <span>General</span>
           </li>
           <li>
-            <a href="<?php echo e(url('/')); ?>" >
+            <a href="<?php echo e(url('/')); ?>">
               <i class="fa fa-home"></i>
               <span class="text-dark"><b>Home</b></span>
               
@@ -687,6 +727,20 @@ a i{
             </a>
             <div class="sidebar-submenu">
               <ul>
+                <li>
+                  <a href="<?php echo e(url('/customer/edit')); ?>" >Edit Profile
+                    <span class="badge badge-pill badge-success">Pro</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="<?php echo e(url('/customer/orders')); ?>">Orders</a>
+                </li>
+                <li>
+                  <a href="<?php echo e(url('/user/wishlist')); ?>">Saved Products</a>
+                </li>
+                <li>
+                  <!-- <a href="<?php echo e(url('/admin_orderlist')); ?>">Payment</a> -
+                </li>
                 
               </ul>
             </div>
@@ -694,52 +748,46 @@ a i{
           
           
           
-                <li>
-                  <a href="<?php echo e(url('/productlist')); ?>" >
-                  <i class="fa fa-book"></i>
-                  <span class="text-dark"><b> Product List </b></span>
-                  </a>
-                </li>
-                <li>
-                <li>
-                  <a href="<?php echo e(url('/franchiseelist')); ?>" >
-                  <i class="fa fa-book"></i>
-                  <span class="text-dark"><b> Franchisee List </b></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="<?php echo e(url('/customerlist')); ?>">
-                 <i class="fa fa-users" aria-hidden="true"></i>
-                   <span class="text-dark"><b>Customer List</b> </span></a>
-                </li>
-                <li>
-                  <a href="<?php echo e(url('/studentlist')); ?>">
-                 <i class="fa fa-users" aria-hidden="true"></i>
-                   <span class="text-dark"><b>Student List</b> </span></a>
-                </li>
-                <li>
-                  <a href="<?php echo e(url('/hostellist')); ?>">
-                 <i class="fa fa-home" aria-hidden="true"></i>
-                   <span class="text-dark"><b>Hostel List</b> </span></a>
-                </li>
-                <li>
-                  <a href="<?php echo e(url('/admin/userblogs')); ?>" >
-                  <i class="fa fa-book"></i>
-                  <span class="text-dark"><b> Blog List </b></span>
-                  </a>
-                </li>
-                <li>
-                <a href="<?php echo e(url('/admin/admissions')); ?>"> 
-               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                <span class="text-dark"><b>Admissions</b> </span></a>
-                </li>
-                <li>
-                <a href="<?php echo e(url('/admin/orderlist')); ?>"> 
-               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                <span class="text-dark"><b>Payment</b> </span></a>
-                </li>
-               
+             <li>  
+          <a href="<?php echo e(url('/student/edit')); ?>">
+            <i class="fa fa-book"></i>
+            <span class="text-dark"><b>Edit Profile</b></span>
+            
+          </a>
+        </li>
+        <li>
+        <li>
+          
+            <a href="<?php echo e(url('/student/courses')); ?>">
+            <!-- <a href="#"> -->
+              <i class="fa fa-book"></i>
+              <span class="text-dark"><b>My Courses</b></span>
+              
+            </a>
+          </li>
           <li>
+          <li>
+          
+            <a href="<?php echo e(url('/hostel')); ?>">
+            <!-- <a href="#"> -->
+              <i class="fa fa-book"></i>
+              <span class="text-dark"><b>Add Hostel Details</b></span>
+              
+            </a>
+          </li>
+          <li>
+          <!-- <li>
+          
+            <a href="<?php echo e(url('/user/wishlist')); ?>">
+              <i class="fa fa-book"></i>
+              <span>Saved Products</span>
+              
+            </a>
+          </li> -->
+          <li>
+         
+          <li>
+          
             <a href="<?php echo e(url('/user/logout')); ?>">
               <i class="fa fa-power-off"></i>
               <span class="text-dark"><b>Logout</b></span>
@@ -750,13 +798,6 @@ a i{
             <a href="<?php echo e(url('/contact')); ?>">
               <i class="fa fa-phone"></i>
               <span class="text-dark"><b>Contact Us</b></span>
-              
-            </a>
-          </li>
-          <li>
-            <a href="<?php echo e(url('/admin/enquirylist')); ?>">
-              <i class="fa fa-info"></i>
-              <span class="text-dark"><b>Enquiry</b></span>
               
             </a>
           </li>
@@ -828,6 +869,28 @@ $(".page-wrapper").addClass("toggled");
 </script> 
     
 
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo e(asset('/js/jquery.min.js')); ?>"></script>
+    <script type="text/javascript" src="<?php echo e(asset('/js/app.js')); ?>"></script>
+    <a id="scrollUp" href="#top" style="position: fixed; z-index:2147483647;display:block;">
+      <i class="fa fa-arrow-up"></i>
+    </a>
+    <!-- WhatsHelp.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "+91-820-830-8116", // WhatsApp number
+            call_to_action: "Message us", // Call to action
+            position: "right", // Position may be 'right' or 'left'
+        };
+        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
       <?php echo $__env->yieldContent('scripts'); ?>
   </body>
 </html>
